@@ -38,7 +38,7 @@ export default class TestControl {
         } 
         // First render
         this.view.renderProgress(this.model.answeredList.length, this.model.selectedQuestions.length, this.model.wrongAnswersList.length);
-        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions);
+        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions, this.model.pictureQuestions);
         this.applyHistory();
         this.saveSession();
 
@@ -72,14 +72,14 @@ export default class TestControl {
 
     onNextClick() {
         this.model.selectNext();
-        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions);
+        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions, this.model.pictureQuestions);
         this.applyHistory();
         this.saveSession();
     }
 
     onPrevClick() {
         this.model.selectPrev();
-        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions);
+        this.view.renderQuestion(this.model.forDisplay, this.model.selectedQuestions, this.model.pictureQuestions);
         this.applyHistory();
         this.saveSession();
     }

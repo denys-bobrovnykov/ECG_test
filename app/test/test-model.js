@@ -12,6 +12,7 @@ export default class TestModel{
     this.questionLeft = 0; // total questions in the SELECT
     this.selectedQuestions = []; // SELECTed questions from chosen chapters array
     this.wrongAnswersList = []; // wrong answers array
+    this.pictureQuestions = [1871,2131];
     // Select questions for display
     this.selectChapters(questions, chapters, chaptersRanges); // select questions in this SELECT
   }

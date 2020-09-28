@@ -88,7 +88,8 @@ export default class IndexControl{
                 12: [1240, 1469],
                 13: [1470, 1508],
                 14: [1509, 1661],
-                15: [1662, 1706]
+                15: [1662, 1706],
+                16: [1707, 2131]
         }   
         localStorage.setItem('chaptersRanges', JSON.stringify(chaptersRanges));
     }

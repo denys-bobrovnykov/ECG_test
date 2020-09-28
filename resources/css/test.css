@@ -6,6 +6,9 @@
     /* margin-top: 70px; */
     padding: 10px;
 }
+.question-picture {
+    width: 100%;
+}
 #answer-form input {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -43,6 +46,8 @@
     transform: translate(-50%, 10px);
     /* border-radius: 20px; */
 }
+
+/*  Answers colors  */
 
 .wrong-color {
     background-color: rgba(219, 53, 53, 0.5);

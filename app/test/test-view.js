@@ -14,6 +14,8 @@ export default class TestView{
       this.submitButton.type = 'submit';
       this.submitButton.innerHTML = 'Перевірити';
       this.submitButton.classList.add('check-button');
+      this.image = document.createElement('img');
+      this.image.classList.add('question-picture');
       //Buttons select
       this.homeButton = document.querySelector('.nav-home');
       this.nextButton = document.querySelector('.next-button');
@@ -39,9 +41,15 @@ export default class TestView{
       
     }
 
-    renderQuestion(n = forDisplay, selectedQuestions, checked) {
+    renderQuestion(n = forDisplay, selectedQuestions, pictureQuestions) {
 
       this.clear();
+      if((+selectedQuestions[n].num >= +pictureQuestions[0]) && (+selectedQuestions[n].num <= +pictureQuestions[1])) {
+        this.image.src = `./resources/img/${selectedQuestions[n].num}.png`;
+        this.image.onload = () => {
+          this.questionText.append(this.image);
+        }
+      }
       this.questionText.innerHTML = '<p>' + selectedQuestions[n].text + '</p>';
 
       for ( let key in selectedQuestions[n].a ) {
