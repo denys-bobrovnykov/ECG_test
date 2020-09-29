@@ -22,8 +22,12 @@ export default class IndexControl{
 
     goClick(e) {
         e.preventDefault();
-        this.storeData();
-        window.location.href = './test.html';
+        if(this.model.selectedChapters[0]) {
+            this.storeData();
+            window.location.href = './test.html';
+        } else {
+            alert('Виберіть розділ');
+        }
     }
 
     initIndex() {
